@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+button {
+  cursor: pointer;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 20px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
+  color: #212121;
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+.timer {
+  display: flex;
+  width: 400px;
+  margin-left: 10px;
+}
+.value {
+  font-size: 40px;
+}
+.label {
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px 0 20px;
+  align-items: center;
+}
+#datetime-picker {
+  width: 335px;
+  margin: 15px 10px;
+  padding: 5px 0 5px 5px;
+  border: 1px solid rgb(180, 180, 180);
+  font-size: 20px;
+}
+.button-style {
+  width: 60px;
+  margin-bottom: 15px;
+  border: 1px solid rgb(180, 180, 180);
+  font-size: 20px;
+  padding: 5px 0 5px 0;
+}
+.active-style {
+  color: rgb(180, 180, 180);
+}
+
+.create-promises {
+  border: 1px solid rgb(180, 180, 180);
+  padding: 10px;
+  margin-left: 30px;
+}
+.button-style {
+  border: 1px solid rgb(180, 180, 180);
+  margin: 10px;
+}
+.promise-style-input {
+  width: 100px;
+  padding: 5px;
+  border: 1px solid rgb(180, 180, 180);
+}
