@@ -1,7 +1,7 @@
 let timerId = null;
 const NOTIFICATION_DELAY = 1000;
 let activeStatus = false;
-refs = {
+const refs = {
   startButton: document.querySelector('button[data-start]'),
   stopButton: document.querySelector('button[data-stop]'),
 };
