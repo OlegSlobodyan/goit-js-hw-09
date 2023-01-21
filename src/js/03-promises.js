@@ -3,7 +3,7 @@ const refs = {
   form: document.querySelector('.form'),
   submitButton: document.querySelector('.create-promises'),
 };
-value = {};
+const value = {};
 refs.form.addEventListener('input', e => {
   value[e.target.name] = Number(e.target.value);
 });
