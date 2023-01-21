@@ -1,5 +1,5 @@
 import Notiflix from 'notiflix';
-refs = {
+const refs = {
   form: document.querySelector('.form'),
   submitButton: document.querySelector('.create-promises'),
 };

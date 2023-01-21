@@ -4,7 +4,7 @@ import Notiflix from 'notiflix';
 let isActive = false;
 let parseTime = 0;
 let currentDay = 0;
-refs = {
+const refs = {
   startButton: document.querySelector('button[data-start]'),
   dataDays: document.querySelector('span[data-days]'),
   dataHours: document.querySelector('span[data-hours]'),
