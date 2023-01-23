@@ -25,8 +25,12 @@ const options = {
   onClose(selectedDates) {
     parseTime = selectedDates[0].getTime() - Date.now();
     currentDay = selectedDates[0].getDate();
-    if (selectedDates[0].getDate() <= new Date().getDate()) {
+    console.log(selectedDates[0].getTime());
+    console.log(Date.now());
+    if (selectedDates[0].getTime() <= Date.now()) {
       Notiflix.Notify.failure('Будь ласка, оберіть дату в майбутньому!');
+      refs.startButton.classList.add('active-style');
+      isActive = false;
     } else {
       isActive = true;
       refs.startButton.classList.remove('active-style');
@@ -39,10 +43,11 @@ flatpickr('#datetime-picker', options);
 refs.startButton.addEventListener('click', start);
 
 function start() {
-  if (!isActive || currentDay === new Date().getDate()) {
+  if (!isActive) {
     return;
   }
   isActive = false;
+  refs.startButton.classList.add('active-style');
   const startTime = Date.now();
   const intervalId = setInterval(() => {
     let carrentTime = Date.now();
@@ -54,8 +59,8 @@ function start() {
     refs.dataHours.textContent = addLeadingZero(hours);
     refs.dataMinutes.textContent = addLeadingZero(minutes);
     refs.dataSeconds.textContent = addLeadingZero(seconds);
-
-    if (timer === 0) {
+console.log(timer);
+    if (timer <= 1000) {
       clearInterval(intervalId);
     }
   }, 1000);
