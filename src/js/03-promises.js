@@ -5,8 +5,6 @@ const refs = {
   valueInput: document.querySelector('.first-delay'),
 };
 
-refs.valueInput.addEventListener('input', e => (delayValue = e.target.value));
-
 refs.valueInput.addEventListener('input', e => {
   let delayValue = Number(e.target.value);
 });
@@ -16,7 +14,6 @@ refs.form.addEventListener('submit', e => {
   let {
     elements: { delay, step, amount },
   } = e.currentTarget;
-  console.log(` ${delay.value}, ${step.value}, ${amount.value}`);
   delayValue = delay.value;
 
   for (let i = 1; i <= amount.value; i += 1) {
