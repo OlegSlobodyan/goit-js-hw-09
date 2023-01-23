@@ -2,7 +2,6 @@ let timerId = null;
 const NOTIFICATION_DELAY = 1000;
 let activeStatus = false;
 
-
 const refs = {
   startButton: document.querySelector('button[data-start]'),
   stopButton: document.querySelector('button[data-stop]'),
@@ -27,12 +26,10 @@ function startSwicher() {
 function stopSwicher() {
   clearInterval(timerId);
   activeStatus = false;
-    refs.startButton.classList.remove('active-style');
-    refs.stopButton.classList.add('active-style');
-
+  refs.startButton.classList.remove('active-style');
+  refs.stopButton.classList.add('active-style');
 }
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
-console.log('qwqweq');

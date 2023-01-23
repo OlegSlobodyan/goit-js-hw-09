@@ -16,7 +16,7 @@ if (!isActive) {
 } else if (isActive) {
   refs.startButton.classList.remove('active-style');
 }
-console.dir(refs.startButton.classList);
+
 const options = {
   enableTime: true,
   time_24hr: true,
@@ -25,8 +25,6 @@ const options = {
   onClose(selectedDates) {
     parseTime = selectedDates[0].getTime() - Date.now();
     currentDay = selectedDates[0].getDate();
-    console.log(selectedDates[0].getTime());
-    console.log(Date.now());
     if (selectedDates[0].getTime() <= Date.now()) {
       Notiflix.Notify.failure('Будь ласка, оберіть дату в майбутньому!');
       refs.startButton.classList.add('active-style');
@@ -59,7 +57,6 @@ function start() {
     refs.dataHours.textContent = addLeadingZero(hours);
     refs.dataMinutes.textContent = addLeadingZero(minutes);
     refs.dataSeconds.textContent = addLeadingZero(seconds);
-console.log(timer);
     if (timer <= 1000) {
       clearInterval(intervalId);
     }
